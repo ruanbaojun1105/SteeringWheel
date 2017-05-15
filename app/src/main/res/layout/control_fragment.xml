@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:keepScreenOn="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            >
+
+            <com.hwx.wheel.steeringwheel.MyWheel
+                android:id="@+id/mywheel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                />
+
+            <TextView
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这是简单控制界面" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <io.techery.progresshint.addition.widget.VerticalSeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:seekBarRotation="CW270"
+                    app:popupStyle="follow"
+                    app:popupAlwaysShown="true"
+                    android:id="@+id/turns1"
+                    android:max="200"
+                    app:popupLayout="@layout/custom_progress_hint_popup"
+                    />
+            </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+            <!--<com.hwx.wheel.steeringwheel.MySeekBar
+                android:id="@+id/turns"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:minHeight="3dp"
+                android:minWidth="260dp"
+                android:max="200"
+                android:focusable="false"
+            />-->
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="重置"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/reset"
+                android:textColor="@color/mainThemeColor"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:background="@drawable/bg_custom_seekbar_hint_popup"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

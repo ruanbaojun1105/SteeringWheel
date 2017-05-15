@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/resule_text"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:maxWidth="50dp"
+            android:text="hello_world"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+        <EditText
+            android:id="@+id/content_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/resule_text"
+            android:ems="10"
+            android:hint="Input content" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/content_edit"
+            android:onClick="onClick"
+            android:text="Send" />
+    </LinearLayout>
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/content_frame"
+        >
+    </FrameLayout>
+</LinearLayout>
